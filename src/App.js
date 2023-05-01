@@ -6,6 +6,7 @@ import FeedbackStats from './components/FeedbackStats';
 import FeedbackForm from './components/FeedbackForm';
 import AboutPage from './components/pages/AboutPage';
 import AboutIconLink from './components/AboutIconLink';
+import HouseUserIconLink from './components/HouseUserIconLink';
 // import Card from "./components/shared/Card";
 import { useState } from 'react';
 import FeedbackData from './data/FeedbackData';
@@ -53,7 +54,7 @@ function App() {
 
           <Route path='/about' element={<AboutPage handleAboutClick={clickAboutIcon}/>} />
         </Routes>
-        {isAbout && <AboutIconLink handleAboutClick={clickAboutIcon} />} 
+        {isAbout ? <AboutIconLink handleAboutClick={clickAboutIcon} /> : <HouseUserIconLink handleAboutClick={clickAboutIcon}/> } 
       </div>
     </Router>
   );
