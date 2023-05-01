@@ -1,5 +1,8 @@
-import PropTypes from 'prop-types'
-const FeedbackStats = ({ feedback }) => {
+import { useContext } from "react";
+import FeedbackContext from './context/FeedbackContext';
+
+const FeedbackStats = () => {
+  const { feedback } = useContext(FeedbackContext);
 
   //Calculate the ratins avg
   let avg =
@@ -18,9 +21,5 @@ const FeedbackStats = ({ feedback }) => {
     </div>
   );
 };
-
-FeedbackStats.propTypes = {
-    feedback: PropTypes.array.isRequired,
-}
 
 export default FeedbackStats;
