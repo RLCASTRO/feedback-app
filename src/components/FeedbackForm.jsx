@@ -7,9 +7,9 @@ import FeedbackContext from './context/FeedbackContext';
 const FeedbackForm = () => {
   const [text, setText] = useState('');
   const [btnDisabled, setBtnDisabled] = useState(true);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState(null);
   const [rating, setRating] = useState(10);
-  const { addFeedback, feedbackEdit, updateFeedback } =
+  const { addFeedback, feedbackEdit, updateFeedback, cancelFeedback } =
     useContext(FeedbackContext);
 
   useEffect(() => {
@@ -23,18 +23,20 @@ const FeedbackForm = () => {
   const handleTextChange = (e) => {
     //when the function first loads, verify if the text has something on it
     //if it doesn't then set the button to disabled and the message to null
-    if (text === '') {
+    let inputText = e.target.value;
+    if (inputText === null || inputText === '') {
       setBtnDisabled(true);
       setMessage(null);
-    } else if (text !== '' && text.trim().length <= 10) {
-      setText('Text must be at least 10 characters');
+    } else if (inputText.trim().length < 10) {
+      setMessage('Text must be at least 10 characters');
       setBtnDisabled(true);
+      console.log('hello');
     } else {
       setMessage(null);
       setBtnDisabled(false);
     }
+    setText(inputText);
 
-    setText(e.target.value);
     // console.log(e.target.value);
   };
 
@@ -54,6 +56,7 @@ const FeedbackForm = () => {
       }
       setText('');
       setBtnDisabled(true);
+      cancelFeedback();
     }
   };
 
