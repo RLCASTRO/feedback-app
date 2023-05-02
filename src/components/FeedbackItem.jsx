@@ -1,16 +1,19 @@
-import { FaTimes } from 'react-icons/fa'; //font awesome library
+import { FaTimes, FaEdit } from 'react-icons/fa'; //font awesome library
 import Card from './shared/Card';
 import { useContext } from 'react';
 import FeedbackContext from './context/FeedbackContext';
 
 function FeedbackItem({ item }) {
-  const { deleteFeedback } = useContext(FeedbackContext);
+  const { deleteFeedback, editFeedback } = useContext(FeedbackContext);
 
   return (
     //passing the reverse prop here
     <Card reverse={false}>
       <div className='num-display'>{item.rating}</div>
       {/* If you want to pass an argument on the click event, put it in a function */}
+      <button className='edit' onClick={() => editFeedback(item)}>
+        <FaEdit color='purple' />
+      </button>
       <button className='close' onClick={() => deleteFeedback(item.id)}>
         <FaTimes color='purple' />
       </button>
