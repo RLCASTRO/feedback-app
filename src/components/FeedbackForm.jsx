@@ -9,8 +9,7 @@ const FeedbackForm = () => {
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState(null);
   const [rating, setRating] = useState(10);
-  const { addFeedback, feedbackEdit, updateFeedback, cancelFeedback } =
-    useContext(FeedbackContext);
+  const { addFeedback, feedbackEdit, updateFeedback, cancelFeedback } = useContext(FeedbackContext);
 
   useEffect(() => {
     if (feedbackEdit.edit === true) {
@@ -45,8 +44,8 @@ const FeedbackForm = () => {
     //because we can still forcing the button the be available on front end, we'll do another verification
     if (text.trim().length > 10) {
       const newFeedback = {
-        text,
         rating,
+        text,
       };
 
       if (feedbackEdit.edit) {
