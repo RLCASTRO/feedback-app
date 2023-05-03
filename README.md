@@ -5,8 +5,6 @@
 
 # Feedback App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 This project was developed while taking the course [React Front To Back - by Brad Traversy](https://www.udemy.com/share/105yDQ3@IkIXbL2AeFyRph3Zy71HDGpO_xchQCNgy1WsAY-86LDAPr3GpQ2olkfR45MXEBCo/)
 
 ## Key Takeaways from this course
