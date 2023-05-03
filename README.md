@@ -16,7 +16,7 @@ This project make me practice some of the most common things in the React enviro
 ###
 * How to start a new React project
 ###
-React basics with JSX wich stands for JavaScript XML. It is simply a syntax extension of JavaScript that allows developers to directly write HTML in React (within JavaScript code).
+* React basics with JSX 
 ###
 * How to make JSX to work dinamically.
 ###
