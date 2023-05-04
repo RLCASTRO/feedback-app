@@ -5,8 +5,6 @@
 
 # Feedback App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 This project was developed while taking the course [React Front To Back - by Brad Traversy](https://www.udemy.com/share/105yDQ3@IkIXbL2AeFyRph3Zy71HDGpO_xchQCNgy1WsAY-86LDAPr3GpQ2olkfR45MXEBCo/)
 
 ## Key Takeaways from this course
@@ -16,7 +14,7 @@ This project make me practice some of the most common things in the React enviro
 ###
 * How to start a new React project
 ###
-React basics with JSX wich stands for JavaScript XML. It is simply a syntax extension of JavaScript that allows developers to directly write HTML in React (within JavaScript code).
+* React basics with JSX 
 ###
 * How to make JSX to work dinamically.
 ###
