@@ -70,7 +70,7 @@ export const FeedbackProvider = ({ children }) => {
         feedback,
         deleteFeedback,
         addFeedback,
-        editFeedback, //this is the function triggered when click on the edit icon
+        editFeedback, //this is the function triggered when click on the edit icon.
         feedbackEdit, //the state to be accessible outside this component
         updateFeedback,
         cancelFeedback,
