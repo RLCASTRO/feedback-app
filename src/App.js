@@ -18,21 +18,24 @@ function App() {
   };
 
   return (
-    <FeedbackProvider>
-      <Router>
-        <Header />
-        <div className='container'>
-          <Routes>
-            <Route
-              path='/'
-              element={
-                <>
-                  <FeedbackForm />
-                  <FeedbackStats />
-                  <FeedbackList />
-                </>
-              }
-            ></Route>
+    <Router>
+      <Header />
+      <div className='container'>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <>
+                <FeedbackForm handleAdd={addFeedback} />
+                <FeedbackStats feedback={feedback} />
+                {/* passing the feedback data to the component. */}
+                <FeedbackList
+                  feedback={feedback}
+                  handleDelete={deleteFeedback}
+                />
+              </>
+            }
+          ></Route>
 
             <Route
               path='/about'
