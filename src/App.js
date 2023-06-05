@@ -43,7 +43,7 @@ function App() {
               <>
                 <FeedbackForm handleAdd={addFeedback} />
                 <FeedbackStats feedback={feedback} />
-                {/* passing the feedback data to the component */}
+                {/* passing the feedback data to the component. */}
                 <FeedbackList
                   feedback={feedback}
                   handleDelete={deleteFeedback}
