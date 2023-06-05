@@ -38,7 +38,7 @@ function App() {
       <div className='container'>
         <Routes>
           <Route
-            path='/'
+            path='/feedback-app'
             element={
               <>
                 <FeedbackForm handleAdd={addFeedback} />
