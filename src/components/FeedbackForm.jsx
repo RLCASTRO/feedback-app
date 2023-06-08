@@ -46,7 +46,7 @@ const FeedbackForm = ({ handleAdd }) => {
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>How whould you rate our services?</h2>
+        <h2>How would you rate our services?</h2>
         {/* @todo - Rating select component */}
         <RatingSelect select={(rating) => setRating(rating)} />
 
